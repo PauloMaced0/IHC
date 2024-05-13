@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp"></script>
   </head>
-  <body>
+  <body onload="initLoad()">
 
     <div class="bg-white">
       <header class="absolute inset-x-0 top-0 z-50">
@@ -131,35 +131,19 @@
             </div>
 
             <!-- Cart Items -->
+            <div class="border-b pb-4" id="cartItemsContainer">
+            </div>
             <div class="border-b pb-4">
-              <!-- Individual Book -->
-              <div class="grid grid-cols-12 items-center">
+              <div class="grid grid-cols-12 items-center" id="cartTotalAmount">
                 <div class="col-span-5 flex items-center">
-                  <img src="https://tailwindui.com/img/ecommerce-images/product-page-01-related-product-01.jpg" alt="Book Cover" class="w-16 h-20 object-cover rounded-lg mr-4">
                   <div>
-                    <h3 class="font-semibold text-gray-800">Book Title</h3>
-                    <p class="text-sm text-gray-600">Author Name</p>
+                    <h3 class="font-semibold text-gray-800">Total Amount</h3>
                   </div>
                 </div>
-
-                <!-- Quantity -->
-                <div class="col-span-3">
-                  <input type="number" id="quantity" name="quantity" class="w-16 text-center border rounded-md" value="1" min="1">
-                </div>
-
-                <!-- Price -->
-                <div class="col-span-3 text-gray-800">$20.00</div>
-
-                <!-- Trash Can Icon for Removal -->
-                <div class="col-span-1">
-                  <button>
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-red-600 hover:text-red-800" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
-                    </svg>
-                  </button>
-                </div>
+                <div class="col-span-3"></div>
+                <div class="col-span-3 text-gray-800" id="cartTotal"> 0.00€</div>
+                <div class="col-span-1"></div>
               </div>
-              <!-- End Individual Book -->
             </div>
             <!-- End Cart Items -->
           </div>
@@ -250,41 +234,7 @@
         </div>
       </div>
     </div>
-
-    <!-- JavaScript to Handle Tab Switching -->
-    <script>
-    function openStep(evt, stepName) {
-      // Retrieve all elements with the class "step-content" and hide them
-      var stepContents = document.getElementsByClassName("step-content");
-      for (var i = 0; i < stepContents.length; i++) {
-        stepContents[i].style.display = "none";
-      }
-
-      // Retrieve all buttons within the steps container and remove the active styling
-      var stepButtons = document.querySelectorAll(".steps-container button");
-      for (var i = 0; i < stepButtons.length; i++) {
-        stepButtons[i].className = stepButtons[i].className.replace("text-indigo-600 bg-indigo-100", "text-indigo-600 hover:text-indigo-600 bg-indigo-100");
-      }
-
-      // Display the current step's content
-      document.getElementById(stepName).style.display = "block";
-
-      // Add 'active' styling to the button that opened the step
-      evt.currentTarget.className = "block w-full py-4 px-2 text-center text-sm font-medium text-indigo-600 bg-indigo-100 focus:outline-none";
-
-      // Optionally, update the URL or state as needed
-      // window.history.pushState({step: stepName}, `Step: ${stepName}`, `#${stepName}`);
-    }
-
-    function openModal() {
-      document.getElementById('paymentSuccessModal').classList.remove('hidden');
-    }
-
-    function closeModal() {
-      document.getElementById('paymentSuccessModal').classList.add('hidden');
-      window.location.href="./index.html"
-    }     
-    </script>
+    <script src="../js/cart.js"></script>
     </div>
   </body>
 </html>
