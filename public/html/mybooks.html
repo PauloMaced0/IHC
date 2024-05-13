@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://cdn.tailwindcss.com"></script>
+	<script src="https://cdn.jsdelivr.net/npm/daisyui@4.10.2/dist/full.min.js"></script>
+	<script src="../js/index.js"></script>
     <link rel="stylesheet" href="../css/trade.css">
     <link href="https://cdn.jsdelivr.net/npm/daisyui@4.10.2/dist/full.min.css" rel="stylesheet" type="text/css" />
   </head>
@@ -15,7 +17,7 @@
 			<div class="flex lg:flex-1">
 				<a href="index.html" class="-m-1.5 p-1.5">
 				<span class="sr-only">BookFlix</span>
-				<img class="h-12 w-auto" src="book.png" alt="">
+				<img class="h-12 w-auto" src="../assets/book.png" alt="">
 				</a>
 			</div>
 			<div class="flex lg:hidden">
@@ -45,7 +47,7 @@
 				<div class="flex items-center justify-between">
 				<a href="#" class="-m-1.5 p-1.5">
 					<span class="sr-only">Bookflix</span>
-					<img class="h-12 w-auto" src="book.png" alt="">
+					<img class="h-12 w-auto" src="../assets/book.png" alt="">
 				</a>
 				<button type="button" class="-m-2.5 rounded-md p-2.5 text-gray-700">
 					<span class="sr-only">Close menu</span>
@@ -73,7 +75,7 @@
 		<div class="relative isolate px-6 pt-14 lg:px-8">
 
 			<div class="radio-inputs">
-			<label>
+			<label onclick="mybooks()">
 				<input class="radio-input" type="radio" name="engine">
 					<span class="radio-tile">
 						<span class="radio-icon">
@@ -82,7 +84,7 @@
 						<span class="radio-label">My Books</span>
 					</span>
 			</label>
-			<label>
+			<label onclick="mywishes()">
 				<input class="radio-input" type="radio" name="engine">
 				<span class="radio-tile">
 					<span class="radio-icon">
@@ -91,7 +93,7 @@
 					<span class="radio-label">My Wishes</span>
 				</span>
 			</label>
-			<label>
+			<label onclick="inprocess()">
 				<input class="radio-input" type="radio" name="engine">
 				<span class="radio-tile">
 					<span class="radio-icon">
@@ -100,7 +102,7 @@
 					<span class="radio-label">In Process</span>
 				</span>
 			</label>
-			<label>
+			<label onclick="incomingrequests()">
 				<input class="radio-input" type="radio" name="engine">
 				<span class="radio-tile">
 					<span class="radio-icon">
@@ -116,14 +118,14 @@
 				<h1 class="text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl">My Books</h1>
 				</div>
 			</div>
-			<div>
+			<div >
 				<div class="bg-white">
 					<div class="mx-auto max-w-2xl px-4 py-16 sm:px-6 sm:py-24 lg:max-w-7xl lg:px-8">
 			
 					  <div class="mt-6 grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-4 xl:gap-x-8">
 			
 			
-						<div class="group relative ">
+						<div class="group relative " id="livros">
 						  <div class="aspect-h-1 aspect-w-1 w-fit overflow-hidden rounded-md bg-gray-200 lg:aspect-none group-hover:opacity-75 lg:h-80">
 							<img src="../assets/Images/5.jpg" alt="" class="h-full w-full object-cover object-center lg:h-full lg:w-full" style="object-fit:contain;">
 						  </div>
@@ -138,7 +140,7 @@
 							  <img src="../assets/Images/10.jpg" alt="" class="h-full w-full object-cover object-center lg:h-full lg:w-full" style="object-fit:contain;">
 							</div>
 						  </div>
-						  <div class="group relative">
+						  <div onclick="addnew()" class="group relative">
 							<div class="aspect-h-1 aspect-w-1 w-fit overflow-hidden rounded-md bg-gray-200 lg:aspect-none group-hover:opacity-75 lg:h-80">
 								<div class="button_addBook absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
 									<div class="text-gray-700 group relative flex justify-center items-center text black">

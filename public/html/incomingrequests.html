@@ -1,5 +1,5 @@
 <!doctype html>
-<html>
+<html style="background-color: white;">
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,8 +8,7 @@
     <link rel="stylesheet" href="../css/trade.css">
     <link href="https://cdn.jsdelivr.net/npm/daisyui@4.10.2/dist/full.min.css" rel="stylesheet" type="text/css" />
   </head>
-  <body>
-
+  <body class="bg-white">
     <div class="bg-white">
 		<header class="absolute inset-x-0 top-0 z-50">
 			<nav class="flex items-center justify-between p-6 lg:px-8" aria-label="Global">
@@ -114,57 +113,84 @@
 
 			<div class="mx-auto max-w-2xl py-32 sm:py-48 lg:py-10">
 				<div class="text-center">
-				<h1 class="text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl">My Wishes</h1>
+				<h1 class="text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl">In Progress</h1>
 				</div>
 			</div>
-			<div>
-				<div class="mx-auto max-w-2xl px-4 py-16 sm:px-6 sm:py-24 lg:max-w-7xl lg:px-8">
-			
-					<div class="mt-6 grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-4 xl:gap-x-8">
-		  
-		  
-					  <div class="group relative ">
-						<div class="aspect-h-1 aspect-w-1 w-fit overflow-hidden rounded-md bg-gray-200 lg:aspect-none group-hover:opacity-75 lg:h-80">
-						  <img src="../assets/Images/1.jpg" alt="" class="h-full w-full object-cover object-center lg:h-full lg:w-full" style="object-fit:contain;">
+		</div>
+		<div class="mt-20 overflow-x-auto">
+			<table class="table">
+			  <!-- head -->
+			  <thead>
+				<tr>
+				  <th>
+					<label>
+					  <input type="checkbox" class="checkbox" />
+					</label>
+				  </th>
+				  <th class="text-gray-700" >Book</th>
+				  <th class="text-gray-700">State</th>
+				  <th class="text-gray-700">Details</th>
+				  <th></th>
+				</tr>
+			  </thead>
+			  <tbody>
+				<!-- row 1 -->
+				<tr>
+				  <td class = "text-gray-700">
+					<div class="flex items-center gap-3">
+					  <div class="avatar">
+						<div class="mask mask-squircle w-12 h-12">
+						  <img src="https://img.daisyui.com/tailwind-css-component-profile-2@56w.png" alt="Avatar Tailwind CSS Component" />
 						</div>
 					  </div>
-					  <div class="group relative">
-						  <div class="aspect-h-1 aspect-w-1 w-fit overflow-hidden rounded-md bg-gray-200 lg:aspect-none group-hover:opacity-75 lg:h-80">
-							<img src="../assets/Images/9.png" alt="" class="h-full w-full object-cover object-center lg:h-full lg:w-full"  style="object-fit:contain;">
-						  </div>
-						</div>
-						<div class="group relative">
-						  <div class="aspect-h-1 aspect-w-1 w-fit overflow-hidden rounded-md bg-gray-200 lg:aspect-none group-hover:opacity-75 lg:h-80">
-							<img src="../assets/Images/12.jpg" alt="" class="h-full w-full object-cover object-center lg:h-full lg:w-full" style="object-fit:contain;">
-						  </div>
-						</div>
-						<div class="group relative">
-						  <div class="aspect-h-1 aspect-w-1 w-fit overflow-hidden rounded-md bg-gray-200 lg:aspect-none group-hover:opacity-75 lg:h-80">
-							  <div onclick="addnew()" class="button_addBook absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
-								  <div class="text-gray-700 group relative flex justify-center items-center text black">
-									  Add a new book
-									  <button
-										  title="Add New"
-										  class="group cursor-pointer outline-none hover:rotate-90 duration-300">
-										  <svg
-											  xmlns="http://www.w3.org/2000/svg"
-											  width="50px"
-											  height="50px"
-											  viewBox="0 0 24 24"
-											  class="stroke-slate-400 fill-none group-hover:fill-slate-800 group-active:stroke-slate-200 group-active:fill-slate-600 group-active:duration-0 duration-300"
-										  >
-											  <path
-												  d="M12 22C17.5 22 22 17.5 22 12C22 6.5 17.5 2 12 2C6.5 2 2 6.5 2 12C2 17.5 6.5 22 12 22Z"
-												  stroke-width="1.5"
-											  ></path>
-											  <path d="M8 12H16" stroke-width="1.5"></path>
-											  <path d="M12 16V8" stroke-width="1.5"></path>
-										  </svg>
-									  </button>
-								  </div>
-							  </div>
-						  </div>
+					  <div>
+						<div class="font-bold">Hart Hagerty</div>
+						<div class="text-sm opacity-50">United States</div>
 					  </div>
-			</div>
-	</body>
+					</div>
+				  </td>
+				  <td class = "text-gray-700">
+					Zemlak, Daniel and Leannon
+					<br/>
+				  </td>
+				  <td class = "text-gray-700">waiting for aceptence</td>
+				  <th class="text-gray-700">
+					<button class="btn btn-ghost btn-xs">Details</button>
+				</th>
+				<!-- row 1 -->
+				<tr>
+					<td>
+					  <div class="flex items-center gap-3">
+						<div class="avatar">
+						  <div class="mask mask-squircle w-12 h-12">
+							<img src="https://img.daisyui.com/tailwind-css-component-profile-2@56w.png" alt="Avatar Tailwind CSS Component" />
+						  </div>
+						</div>
+						<div>
+						  <div class="text-gray-700 font-bold">Hart Hagerty</div>
+						  <div class="text-gray-700 text-sm opacity-50">United States</div>
+						</div>
+					  </div>
+					</td>
+					<td class = "text-gray-700">
+					  Zemlak, Daniel and Leannon
+					  <br/>
+					</td>
+					<td class = "text-gray-700">waiting for aceptence</td>
+					<th class="text-gray-700">
+					  <button class="btn btn-ghost btn-xs">Details</button>
+				  </th>
+				<tfoot>
+					<tr>
+					  <th></th>
+					  <th class="text-gray-700">Boook</th>
+					  <th class="text-gray-700">State</th>
+					  <th class="text-gray-700">Details</th>
+					  <th></th>
+					</tr>
+				</tfoot>
+			</table>
+		</div>
+	</div>
+</body>
 </html>
