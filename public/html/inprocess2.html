@@ -1,21 +1,19 @@
 <!doctype html>
-<html>
+<html style="background-color: white;">
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://cdn.tailwindcss.com"></script>
-	<script src="https://cdn.jsdelivr.net/npm/daisyui@4.10.2/dist/full.min.js"></script>
 	<script src="../js/index.js"></script>
     <link rel="stylesheet" href="../css/trade.css">
     <link href="https://cdn.jsdelivr.net/npm/daisyui@4.10.2/dist/full.min.css" rel="stylesheet" type="text/css" />
   </head>
-  <body>
-
+  <body class="bg-white">
     <div class="bg-white">
 		<header class="absolute inset-x-0 top-0 z-50">
 			<nav class="flex items-center justify-between p-6 lg:px-8" aria-label="Global">
 			<div class="flex lg:flex-1">
-				<a href="index.html" class="-m-1.5 p-1.5">
+				<a href="../assets/book.png" class="-m-1.5 p-1.5">
 				<span class="sr-only">BookFlix</span>
 				<img class="h-12 w-auto" src="../assets/book.png" alt="">
 				</a>
@@ -47,7 +45,7 @@
 				<div class="flex items-center justify-between">
 				<a href="#" class="-m-1.5 p-1.5">
 					<span class="sr-only">Bookflix</span>
-					<img class="h-12 w-auto" src="../assets/book.png" alt="">
+					<img class="h-12 w-auto" src="book.png" alt="">
 				</a>
 				<button type="button" class="-m-2.5 rounded-md p-2.5 text-gray-700">
 					<span class="sr-only">Close menu</span>
@@ -115,141 +113,30 @@
 
 			<div class="mx-auto max-w-2xl py-32 sm:py-48 lg:py-10">
 				<div class="text-center">
-				<h1 class="text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl">My Books</h1>
+				<h1 class="text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl">In Progress</h1>
 				</div>
 			</div>
-			<div >
-				<div class="bg-white">
-					<div class="mx-auto max-w-2xl px-4 py-16 sm:px-6 sm:py-24 lg:max-w-7xl lg:px-8">
-			
-					  <div class="mt-6 grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-4 xl:gap-x-8">
-			
-			
-						<div class="group relative " id="livros">
-						  <div class="aspect-h-1 aspect-w-1 w-fit overflow-hidden rounded-md bg-gray-200 lg:aspect-none group-hover:opacity-75 lg:h-80">
-							<img src="../assets/Images/5.jpg" alt="" class="h-full w-full object-cover object-center lg:h-full lg:w-full" style="object-fit:contain;">
-						  </div>
-						</div>
-						<div class="group relative">
-							<div class="aspect-h-1 aspect-w-1 w-fit overflow-hidden rounded-md bg-gray-200 lg:aspect-none group-hover:opacity-75 lg:h-80">
-							  <img src="../assets/Images/11.jpg" alt="" class="h-full w-full object-cover object-center lg:h-full lg:w-full"  style="object-fit:contain;">
-							</div>
-						  </div>
-						  <div class="group relative">
-							<div class="aspect-h-1 aspect-w-1 w-fit overflow-hidden rounded-md bg-gray-200 lg:aspect-none group-hover:opacity-75 lg:h-80">
-							  <img src="../assets/Images/10.jpg" alt="" class="h-full w-full object-cover object-center lg:h-full lg:w-full" style="object-fit:contain;">
-							</div>
-						  </div>
-						  <div onclick="addnew()" class="group relative">
-							<div class="aspect-h-1 aspect-w-1 w-fit overflow-hidden rounded-md bg-gray-200 lg:aspect-none group-hover:opacity-75 lg:h-80">
-								<div class="button_addBook absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
-									<div class="text-gray-700 group relative flex justify-center items-center text black">
-										Add a new book
-										<button
-											title="Add New"
-											class="group cursor-pointer outline-none hover:rotate-90 duration-300"
-										>
-											<svg
-												xmlns="http://www.w3.org/2000/svg"
-												width="50px"
-												height="50px"
-												viewBox="0 0 24 24"
-												class="stroke-slate-400 fill-none group-hover:fill-slate-800 group-active:stroke-slate-200 group-active:fill-slate-600 group-active:duration-0 duration-300"
-											>
-												<path
-													d="M12 22C17.5 22 22 17.5 22 12C22 6.5 17.5 2 12 2C6.5 2 2 6.5 2 12C2 17.5 6.5 22 12 22Z"
-													stroke-width="1.5"
-												></path>
-												<path d="M8 12H16" stroke-width="1.5"></path>
-												<path d="M12 16V8" stroke-width="1.5"></path>
-											</svg>
-										</button>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>	
-				</div>
-			</div>
-			<div id="bookDescriptionModal" class="fixed inset-0 z-10 overflow-y-auto hidden">
-				<div class="flex items-end justify-center min-h-screen px-4 pt-4 pb-20 text-center sm:block sm:p-0">
-				  <div class="fixed inset-0 transition-opacity bg-gray-500 bg-opacity-75" aria-hidden="true"></div>
-			  
-				  <!-- This element is to trick the browser into centering the modal contents. -->
-				  <span class="hidden sm:inline-block sm:align-middle sm:h-screen" aria-hidden="true">&#8203;</span>
-			  
-				  <!-- Modal panel, show/hide based on modal state. -->
-				  <div class="inline-block overflow-hidden text-left align-bottom transition-all transform bg-white rounded-lg shadow-xl sm:my-8 sm:align-middle sm:max-w-lg sm:w-full">
-					<div class="px-4 pt-5 pb-4 bg-white sm:p-6 sm:pb-4">
-					  <div class="sm:flex sm:items-start">
-						<div class="mt-3 text-center sm:mt-0 sm:ml-4 sm:text-left">
-						  <h3 class="text-lg font-medium leading-6 text-gray-900" id="modal-title">
-							Book Details
-						  </h3>
-						  <div class="mt-2">
-							<p class="text-sm text-gray-500">
-							  Discover more about the book and additional resources.
-							</p>
-						  </div>
-						</div>
-					  </div>
-					</div>
-					<div class="border-t border-gray-100">
-					  <dl class="divide-y divide-gray-100">
-						<div class="px-4 py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
-						  <dt class="text-sm font-medium text-gray-900">
-							Title
-						  </dt>
-						  <dd class="mt-1 text-sm text-gray-900 sm:col-span-2 sm:mt-0">
-							Harry Potter and the Philosopher's Stone
-						  </dd>
-						</div>
-						<div class="px-4 py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
-						  <dt class="text-sm font-medium text-gray-900">
-							Author
-						  </dt>
-						  <dd class="mt-1 text-sm text-gray-900 sm:col-span-2 sm:mt-0">
-							J.K. Rowling
-						  </dd>
-						</div>
-						<div class="px-4 py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
-						  <dt class="text-sm font-medium text-gray-900">
-							Genre
-						  </dt>
-						  <dd class="mt-1 text-sm text-gray-900 sm:col-span-2 sm:mt-0">
-							Literary Fiction
-						  </dd>
-						</div>
-						<div class="px-4 py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
-						  <dt class="text-sm font-medium text-gray-900">
-							Synopsis
-						  </dt>
-						  <dd class="mt-1 text-sm text-gray-900 sm:col-span-2 sm:mt-0">
-							Harry Potter has never even heard of Hogwarts when the letters start dropping on the doormat at number four, Privet Drive. Addressed in green ink on yellowish parchment with a purple seal, they are swiftly confiscated by his grisly aunt and uncle. Then, on Harry's eleventh birthday, a great beetle-eyed
-						  </dd>
-						</div>
-						<div class="px-4 py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
-						  <img src="../assets/Images/5.jpg" alt="Front of men&#039;s Basic Tee in black." class="h-full w-full object-cover object-center lg:h-full lg:w-full">
-						</div>
-					  </dl>
-					</div>
-					<div class="px-4 py-3 bg-gray-50 sm:px-6 sm:flex sm:flex-row-reverse">
-					  <button type="button" onclick="closeModal()" class="w-full px-4 py-2 text-base font-medium text-white bg-indigo-600 border border-transparent rounded-md shadow-sm hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 sm:ml-3 sm:w-auto sm:text-sm">
-						Close
-					  </button>
-					</div>
-				  </div>
-				</div>
-			  </div>
-			</div>
-			<script>
-				document.getElementById('livros').addEventListener('click', function() {
-				  document.getElementById('bookDescriptionModal').classList.remove('hidden');
-				});
-			
-				function closeModal() {
-				  document.getElementById('bookDescriptionModal').classList.add('hidden');
-				}     
-				</script>	  
-	</body>
+		</div>
+	</div>
+	<div class="card w-96 bg-base-100 shadow-xl">
+		<figure><img src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg" alt="Shoes" /></figure>
+		<div class="card-body">
+		  <h2 class="card-title">Shoes!</h2>
+		  <p>If a dog chews shoes whose shoes does he choose?</p>
+		  <div class="card-actions justify-end">
+			<button class="btn btn-primary">Buy Now</button>
+		  </div>
+		</div>
+	  </div>
+	  <div class="card w-96 bg-base-100 shadow-xl">
+		<figure><img src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg" alt="Shoes" /></figure>
+		<div class="card-body">
+		  <h2 class="card-title">Shoes!</h2>
+		  <p>If a dog chews shoes whose shoes does he choose?</p>
+		  <div class="card-actions justify-end">
+			<button class="btn btn-primary">Buy Now</button>
+		  </div>
+		</div>
+	  </div>
+</body>
 </html>
