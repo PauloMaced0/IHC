@@ -1,268 +1,115 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp"></script>
-    <script src="../js/index.js"></script>
-  </head>
-  <body>
-    <div class="bg-white">
-      <div class="bg-white">
-        <header class="absolute inset-x-0 top-0 z-50">
-          <nav class="flex items-center justify-between p-6 lg:px-8" aria-label="Global">
-            <div class="flex lg:flex-1">
-              <a href="./index.html" class="-m-1.5 p-1.5">
-                <span class="sr-only">BookFlix</span>
-                <img class="h-12 w-auto" src="../assets/book.png" alt="">
-              </a>
-            </div>
-            <div class="flex lg:hidden">
-              <button type="button" class="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-700">
-                <span class="sr-only">Open main menu</span>
-                <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
-                  aria-hidden="true">
-                  <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
-                </svg>
-              </button>
-            </div>
-            <div class="hidden lg:flex lg:gap-x-12">
-              <a href="./marketplace.html" class="text-sm font-semibold leading-6 text-gray-900">Marketplace</a>
-              <a href="./trade.html" class="text-sm font-semibold leading-6 text-gray-900">Trade</a>
-              <a href="./donate.html" class="text-sm font-semibold leading-6 text-gray-900">Donate</a>
-              <a href="./about.html" class="text-sm font-semibold leading-6 text-gray-900">About</a>
-            </div>
-            <div class="hidden lg:flex lg:flex-1 lg:justify-end">
-              <!-- Shop Cart -->
-              <a href="./cart.html" class="mx-5">
-                <img class="h-6 w-6" src="../assets/shopping_cart.png" alt="">
-              </a>
-              <!-- End Shop Cart -->
-              <!-- <a href="#" class="text-sm font-semibold leading-6 text-gray-900">Log in <span aria-hidden="true">&rarr;</span></a> -->
-              <a href="./profile.html" class="mx-5">
-                <img class="h-6 w-6" src="../assets/user.png" alt="">
-              </a>
-            </div>
-          </nav>
-        <div class="lg:hidden" role="dialog" aria-modal="true">
-          <!-- Background backdrop, show/hide based on slide-over state. -->
-          <div class="fixed inset-0 z-50"></div>
-          <div class="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
-            <div class="flex items-center justify-between">
-              <a href="#" class="-m-1.5 p-1.5">
-                <span class="sr-only">Bookflix</span>
-                <img class="h-12 w-auto" src="../assets/book.png" alt="">
-              </a>
-              <button type="button" class="-m-2.5 rounded-md p-2.5 text-gray-700">
-                <span class="sr-only">Close menu</span>
-                <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
-                  <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
-                </svg>
-              </button>
-            </div>
-            <div class="mt-6 flow-root">
-              <div class="-my-6 divide-y divide-gray-500/10">
-                <div class="space-y-2 py-6">
-                  <a href="./marketplace" class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">Marketplace</a>
-                  <a href="./trade.html" class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">Trade</a>
-                  <a href="./donate.html" class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">Donate</a>
-                  <a href="./about.html" class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">About</a>
-                </div>
-                <div class="py-6">
-                  <!-- <a href="#" class="-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">Log in</a> -->
-                  <a href="./profile.html" class="mx-5">
-                    <img class="h-6 w-6" src="../assets/user.png" alt="">
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp"></script>
+</head>
+
+<body>
+
+  <div class="bg-white">
+    <header class="absolute inset-x-0 top-0 z-50">
+      <nav class="flex items-center justify-between p-6 lg:px-8" aria-label="Global">
+        <div class="flex lg:flex-1">
+          <a href="./index.html" class="-m-1.5 p-1.5">
+            <span class="sr-only">BookFlix</span>
+            <img class="h-12 w-auto" src="../assets/book.png" alt="">
+          </a>
         </div>
-      </header>
-      <hr class="my-2 h-px border-t-0 bg-transparent bg-gradient-to-r from-transparent via-neutral-500 to-transparent opacity-25 dark:via-neutral-400" />
-    <div class="bg-white">
-      <div class="mx-auto max-w-2xl px-4 py-16 sm:px-6 sm:py-24 lg:max-w-7xl lg:px-8">
-        <h1 class="text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl" style=" text-align: center;">Marketplace</h1>
-
-        <div class="mt-6 grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-4 xl:gap-x-8" style="margin-top: 120px;">
-          <div class="group relative cursor-pointer" id="livros">
-            <div
-              class="aspect-w-1 aspect-h-1.5 w-full overflow-hidden rounded-md bg-gray-200 lg:aspect-none group-hover:opacity-75 lg:h-70 lg:w-60">
-              <img src="../assets/Images/8.jpg" alt="Front of men&#039;s Basic Tee in black."
-                class="h-full w-full object-cover object-center lg:h-full lg:w-full">
-            </div>
-            <div class="mt-4 flex justify-between">
-              <div>
-                <h3 class="text-sm text-gray-700">
-                  <!-- <a href="#"> -->
-                  <span aria-hidden="true" class="absolute inset-0"></span>
-                  The Hobbit
-                  <!-- </a> -->
-                </h3>
-                <p class="mt-1 text-sm text-gray-500">Literary Fiction</p>
-              </div>
-              <p class="text-sm font-medium text-gray-900">19.99€</p>
-            </div>
-          </div>  
-          <div class="group relative">
-            <div
-              class="aspect-w-1 aspect-h-1.5 w-full overflow-hidden rounded-md bg-gray-200 lg:aspect-none group-hover:opacity-75 lg:h-70 lg:w-60">
-              <img src="../assets/Images/3.jpg" alt="Cover of the book 1984."
-                class="h-full w-full object-cover object-center lg:h-full lg:w-full">
-            </div>
-            <div class="mt-4 flex justify-between">
-              <div>
-                <h3 class="text-sm text-gray-700">
-                  <a href="#">
-                    <span aria-hidden="true" class="absolute inset-0"></span>
-                    The Alchemist
-                  </a>
-                </h3>
-                <p class="mt-1 text-sm text-gray-500">Romance</p>
-              </div>
-              <p class="text-sm font-medium text-gray-900">29.99€</p>
-            </div>
-          </div>
-
-          <div class="group relative">
-            <div
-              class="aspect-w-1 aspect-h-1.5 w-full overflow-hidden rounded-md bg-gray-200 lg:aspect-none group-hover:opacity-75 lg:h-70 lg:w-60">
-              <img src="../assets/Images/10.jpg" alt="Front of men&#039;s Basic Tee in black."
-                class="h-full w-full object-cover object-center lg:h-full lg:w-full">
-            </div>
-            <div class="mt-4 flex justify-between">
-              <div>
-                <h3 class="text-sm text-gray-700">
-                  <a href="#">
-                    <span aria-hidden="true" class="absolute inset-0"></span>
-                    The Hunger Games
-                  </a>
-                </h3>
-                <p class="mt-1 text-sm text-gray-500">Adventure, Action</p>
-              </div>
-              <p class="text-sm font-medium text-gray-900">9.99€</p>
-            </div>
-          </div>
-
-          <div class="group relative">
-            <div
-              class="aspect-w-1 aspect-h-1.5 w-full overflow-hidden rounded-md bg-gray-200 lg:aspect-none group-hover:opacity-75 lg:h-70 lg:w-60">
-              <img src="../assets/Images/5.jpg" alt="Front of men&#039;s Basic Tee in black."
-                class="h-full w-full object-cover object-center lg:h-full lg:w-full">
-            </div>
-            <div class="mt-4 flex justify-between">
-              <div>
-                <h3 class="text-sm text-gray-700">
-                  <a href="#">
-                    <span aria-hidden="true" class="absolute inset-0"></span>
-                    Harry Potter and the Philosopher's Stone
-                  </a>
-                </h3>
-                <p class="mt-1 text-sm text-gray-500">Literary Fiction</p>
-              </div>
-              <p class="text-sm font-medium text-gray-900">15.99€</p>
-            </div>
-          </div>
-
-          <!-- More products... -->
+        <div class="flex lg:hidden">
+          <button type="button" class="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-700">
+            <span class="sr-only">Open main menu</span>
+            <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+              aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+            </svg>
+          </button>
         </div>
-      </div>
-        <!-- Modal Dialog (initially hidden) -->
-      <div id="bookDescriptionModal" class="fixed inset-0 z-10 overflow-y-auto hidden">
-        <div class="flex items-end justify-center min-h-screen px-4 pt-4 pb-20 text-center sm:block sm:p-0">
-          <div class="fixed inset-0 transition-opacity bg-gray-500 bg-opacity-75" aria-hidden="true"></div>
-
-          <!-- This element is to trick the browser into centering the modal contents. -->
-          <span class="hidden sm:inline-block sm:align-middle sm:h-screen" aria-hidden="true">&#8203;</span>
-
-          <!-- Modal panel, show/hide based on modal state. -->
-          <div
-            class="inline-block overflow-hidden text-left align-bottom transition-all transform bg-white rounded-lg shadow-xl sm:my-8 sm:align-middle sm:max-w-lg sm:w-full">
-            <!-- Close Button at the top right corner -->
-            <div class="absolute top-0 right-0 pt-2 pr-2">
-              <button type="button" onclick="closeModal()"
-                class="bg-white rounded-md p-1 inline-flex items-center justify-center text-gray-400 hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500">
-                <span class="sr-only">Close</span>
-                <!-- Cross Icon using SVG for visuals -->
-                <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-                  stroke="currentColor" aria-hidden="true">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
-                </svg>
-              </button>
-            </div>
-            <div class="px-4 pt-5 pb-4 bg-white sm:p-6 sm:pb-4">
-              <div class="sm:flex sm:items-start">
-                <div class="mt-3 text-center sm:mt-0 sm:ml-4 sm:text-left">
-                  <h3 class="text-lg font-medium leading-6 text-gray-900" id="modal-title">
-                    Book Details
-                  </h3>
-                  <div class="mt-2">
-                    <p class="text-sm text-gray-500">
-                      Discover more about the book.
-                    </p>
-                  </div>
-                </div>
+        <div class="hidden lg:flex lg:gap-x-12">
+          <a href="./marketplace.html" class="text-sm font-semibold leading-6 text-gray-900">Marketplace</a>
+          <a href="./trade.html" class="text-sm font-semibold leading-6 text-gray-900">Trade</a>
+          <a href="./donate.html" class="text-sm font-semibold leading-6 text-gray-900">Donate</a>
+          <a href="./about.html" class="text-sm font-semibold leading-6 text-gray-900">About</a>
+        </div>
+        <div class="hidden lg:flex lg:flex-1 lg:justify-end">
+          <!-- Shop Cart -->
+          <a href="./cart.html" class="mx-5">
+            <img class="h-6 w-6" src="../assets/shopping_cart.png" alt="">
+          </a>
+          <!-- End Shop Cart -->
+          <!-- <a href="#" class="text-sm font-semibold leading-6 text-gray-900">Log in <span aria-hidden="true">&rarr;</span></a> -->
+          <a href="./profile.html" class="mx-5">
+            <img class="h-6 w-6" src="../assets/user.png" alt="">
+          </a>
+        </div>
+      </nav>
+      <!-- Mobile menu, show/hide based on menu open state. -->
+      <div class="lg:hidden" role="dialog" aria-modal="true">
+        <!-- Background backdrop, show/hide based on slide-over state. -->
+        <div class="fixed inset-0 z-50"></div>
+        <div
+          class="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
+          <div class="flex items-center justify-between">
+            <a href="#" class="-m-1.5 p-1.5">
+              <span class="sr-only">Bookflix</span>
+              <img class="h-12 w-auto" src="../assets/book.png" alt="">
+            </a>
+            <button type="button" class="-m-2.5 rounded-md p-2.5 text-gray-700">
+              <span class="sr-only">Close menu</span>
+              <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+                aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+              </svg>
+            </button>
+          </div>
+          <div class="mt-6 flow-root">
+            <div class="-my-6 divide-y divide-gray-500/10">
+              <div class="space-y-2 py-6">
+                <a href="./marketplace"
+                  class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">Marketplace</a>
+                <a href="./trade.html"
+                  class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">Trade</a>
+                <a href="./donate.html"
+                  class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">Donate</a>
+                <a href="./about.html"
+                  class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">About</a>
               </div>
-            </div>
-            <div class="border-t border-gray-100">
-              <dl class="divide-y divide-gray-100">
-                <div class="px-4 py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
-                  <dt class="text-sm font-medium text-gray-900">
-                    Title
-                  </dt>
-                  <dd class="mt-1 text-sm text-gray-900 sm:col-span-2 sm:mt-0">
-                    The Hobbit
-                  </dd>
-                </div>
-                <div class="px-4 py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
-                  <dt class="text-sm font-medium text-gray-900">
-                    Author
-                  </dt>
-                  <dd class="mt-1 text-sm text-gray-900 sm:col-span-2 sm:mt-0">
-                    J.R.R. Tolkien
-                  </dd>
-                </div>
-                <div class="px-4 py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
-                  <dt class="text-sm font-medium text-gray-900">
-                    Genre
-                  </dt>
-                  <dd class="mt-1 text-sm text-gray-900 sm:col-span-2 sm:mt-0">
-                    Literary Fiction
-                  </dd>
-                </div>
-                <div class="px-4 py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
-                  <dt class="text-sm font-medium text-gray-900">
-                    Synopsis
-                  </dt>
-                  <dd class="mt-1 text-sm text-gray-900 sm:col-span-2 sm:mt-0">
-                    The Hobbit is a tale of high adventure, undertaken by a company of dwarves in search of dragon-guarded gold.
-                  </dd>
-                </div>
-                <div class="px-4 py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
-                  <img src="../assets/Images/8.jpg" alt="Front of men&#039;s Basic Tee in black."
-                    class="h-full w-full object-cover object-center lg:h-full lg:w-full">
-                </div>
-              </dl>
-            </div>
-            <div class="px-4 py-3 bg-gray-50 sm:px-6 sm:flex sm:flex-row-reverse">
-              <button type="button" onclick="addToCart({id: 1, name: 'The Hobbit', price: 19.99, author: 'J.R.R. Tolkien', image: '../assets/Images/8.jpg', genre: 'Literary Fiction'})"
-                class="w-full px-4 py-2 text-base font-medium text-white bg-indigo-600 border border-transparent rounded-md shadow-sm hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 sm:ml-3 sm:w-auto sm:text-sm flex items-center justify-center">
-                Add To Cart
-                <img class="h-6 w-6 ml-4" src="../assets/shopping_cart.png" alt="">
-              </button>
+              <div class="py-6">
+                <!-- <a href="#" class="-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">Log in</a> -->
+                <a href="./profile.html" class="mx-5">
+                  <img class="h-6 w-6" src="../assets/user.png" alt="">
+                </a>
+              </div>
             </div>
           </div>
         </div>
+      </div>
+    </header>
+    <div class="relative isolate px-6 pt-14 lg:px-8">
+      <!-- Product grid -->
+      <div class="lg:col-span-3">
+        <!-- Your content -->
       </div>
     </div>
-    <script>
-      document.getElementById('livros').addEventListener('click', function() {
-        document.getElementById('bookDescriptionModal').classList.remove('hidden');
-      });
-    
-      function closeModal() {
-        document.getElementById('bookDescriptionModal').classList.add('hidden');
-      }     
-    </script>	  
-  </body>
-</html>  
+    </section>
+    </main>
+  </div>
+  </div>
+  <div class="bg-white">
+
+    <div class="mx-auto max-w-2xl px-4 py-16 sm:px-6 sm:py-24 lg:max-w-7xl lg:px-8">
+      <h2 class="sr-only">Products</h2>
+
+      <div class="grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 xl:gap-x-8">
+
+        <!-- More products... -->
+      </div>
+    </div>
+  </div>
+  </div>
+  </div>
+  <script src="../js/marketplace.js"></script>
+</body>
+</html>
