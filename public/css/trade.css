@@ -170,18 +170,133 @@
 
 .button2:hover {
     color: #ffffff;
-    border: 1px solid #009087;
+    border: 1px solid indigo;
 }
 
 .button2:hover:before {
     top: -35%;
-    background-color: #009087;
+    background-color: indigo;
     transform: translateX(-50%) scaleY(1.3) scaleX(0.8);
 }
 
 .button2:hover:after {
     top: -45%;
-    background-color: #009087;
+    background-color: indigo;
     transform: translateX(-50%) scaleY(1.3) scaleX(0.8);
 }
+
+.button {
+    position: relative;
+    width: 150px;
+    height: 40px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    border: 1px solid #fa0202;
+    background-color: #e50000;
+    overflow: hidden;
+  }
   
+  .button, .button__icon, .button__text {
+    transition: all 0.3s;
+  }
+  
+  .button .button__text {
+    transform: translateX(35px);
+    color: #ffffff;
+    font-weight: 600;
+  }
+  
+  .button .button__icon {
+    position: absolute;
+    transform: translateX(109px);
+    height: 100%;
+    width: 39px;
+    background-color:#e50000;;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .button .svg {
+    width: 20px;
+  }
+  
+  .button:hover {
+    background: #cc0000;
+  }
+  
+  .button:hover .button__text {
+    color: transparent;
+  }
+  
+  .button:hover .button__icon {
+    width: 148px;
+    transform: translateX(0);
+  }
+  
+  .button:active .button__icon {
+    background-color: #b20000;
+  }
+  
+  .button:active {
+    border: 1px solid #b20000;
+  }
+
+  .button1 {
+    position: relative;
+    width: 150px;
+    height: 40px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    border: 1px solid #34974d;
+    background-color: #3aa856;
+  }
+  
+  .button1, .button__icon, .button__text {
+    transition: all 0.3s;
+  }
+  
+  .button1 .button__text {
+    transform: translateX(30px);
+    color: #fff;
+    font-weight: 600;
+  }
+  
+  .button1 .button__icon {
+    position: absolute;
+    transform: translateX(109px);
+    height: 100%;
+    width: 39px;
+    background-color: #34974d;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .button1 .svg {
+    width: 30px;
+    stroke: #fff;
+  }
+  
+  .button1:hover {
+    background: #34974d;
+  }
+  
+  .button1:hover .button__text {
+    color: transparent;
+  }
+  
+  .button1:hover .button__icon {
+    width: 148px;
+    transform: translateX(0);
+  }
+  
+  .button1:active .button__icon {
+    background-color: #2e8644;
+  }
+  
+  .button1:active {
+    border: 1px solid #2e8644;
+  }
