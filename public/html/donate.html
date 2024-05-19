@@ -1,95 +1,315 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp"></script>
-  </head>
-  <body>
 
-    <div class="bg-white">
-      <header class="absolute inset-x-0 top-0 z-50">
-        <nav class="flex items-center justify-between p-6 lg:px-8" aria-label="Global">
-          <div class="flex lg:flex-1">
-            <a href="./index.html" class="-m-1.5 p-1.5">
-              <span class="sr-only">BookFlix</span>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp"></script>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="../js/index.js"></script>
+  <link rel="stylesheet" href="../css/trade.css">
+</head>
+
+<body>
+
+  <div class="bg-white">
+    <header class="absolute inset-x-0 top-0 z-50">
+      <nav class="flex items-center justify-between p-6 lg:px-8" aria-label="Global">
+        <div class="flex lg:flex-1">
+          <a href="./index.html" class="-m-1.5 p-1.5">
+            <span class="sr-only">BookFlix</span>
+            <img class="h-12 w-auto" src="../assets/book.png" alt="">
+          </a>
+        </div>
+        <div class="flex lg:hidden">
+          <button type="button" class="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-700">
+            <span class="sr-only">Open main menu</span>
+            <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+              aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+            </svg>
+          </button>
+        </div>
+        <div class="hidden lg:flex lg:gap-x-12">
+          <a href="./marketplace.html" class="text-sm font-semibold leading-6 text-gray-900">Marketplace</a>
+          <a href="./trade.html" class="text-sm font-semibold leading-6 text-gray-900">Trade</a>
+          <a href="./donate.html" class="text-sm font-semibold leading-6 text-gray-900">Donate</a>
+          <a href="./about.html" class="text-sm font-semibold leading-6 text-gray-900">About</a>
+        </div>
+        <div class="hidden lg:flex lg:flex-1 lg:justify-end">
+          <!-- Shop Cart -->
+          <a href="./cart.html" class="mx-5">
+            <img class="h-6 w-6" src="../assets/shopping_cart.png" alt="">
+          </a>
+          <!-- End Shop Cart -->
+          <!-- <a href="#" class="text-sm font-semibold leading-6 text-gray-900">Log in <span aria-hidden="true">&rarr;</span></a> -->
+          <a href="./profile.html" class="mx-5">
+            <img class="h-6 w-6" src="../assets/user.png" alt="">
+          </a>
+        </div>
+      </nav>
+
+      <!-- Mobile menu, show/hide based on menu open state. -->
+      <div class="lg:hidden" role="dialog" aria-modal="true">
+        <!-- Background backdrop, show/hide based on slide-over state. -->
+        <div class="fixed inset-0 z-50"></div>
+        <div
+          class="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
+          <div class="flex items-center justify-between">
+            <a href="#" class="-m-1.5 p-1.5">
+              <span class="sr-only">Bookflix</span>
               <img class="h-12 w-auto" src="../assets/book.png" alt="">
             </a>
-          </div>
-          <div class="flex lg:hidden">
-            <button type="button" class="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-700">
-              <span class="sr-only">Open main menu</span>
-              <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+            <button type="button" class="-m-2.5 rounded-md p-2.5 text-gray-700">
+              <span class="sr-only">Close menu</span>
+              <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+                aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
               </svg>
             </button>
           </div>
-          <div class="hidden lg:flex lg:gap-x-12">
-            <a href="./marketplace.html" class="text-sm font-semibold leading-6 text-gray-900">Marketplace</a>
-            <a href="./trade.html" class="text-sm font-semibold leading-6 text-gray-900">Trade</a>
-            <a href="./donate.html" class="text-sm font-semibold leading-6 text-gray-900">Donate</a>
-            <a href="./about.html" class="text-sm font-semibold leading-6 text-gray-900">About</a>
-          </div>
-          <div class="hidden lg:flex lg:flex-1 lg:justify-end">
-            <!-- Shop Cart -->
-            <a href="./cart.html" class="mx-5">
-              <img class="h-6 w-6" src="../assets/shopping_cart.png" alt="">
-            </a>
-            <!-- End Shop Cart -->
-            <!-- <a href="#" class="text-sm font-semibold leading-6 text-gray-900">Log in <span aria-hidden="true">&rarr;</span></a> -->
-            <a href="./profile.html" class="mx-5">
-              <img class="h-6 w-6" src="../assets/user.png" alt="">
-            </a>
-          </div>
-        </nav>
-        <!-- Mobile menu, show/hide based on menu open state. -->
-        <div class="lg:hidden" role="dialog" aria-modal="true">
-          <!-- Background backdrop, show/hide based on slide-over state. -->
-          <div class="fixed inset-0 z-50"></div>
-          <div class="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
-            <div class="flex items-center justify-between">
-              <a href="#" class="-m-1.5 p-1.5">
-                <span class="sr-only">Bookflix</span>
-                <img class="h-12 w-auto" src="../assets/book.png" alt="">
-              </a>
-              <button type="button" class="-m-2.5 rounded-md p-2.5 text-gray-700">
-                <span class="sr-only">Close menu</span>
-                <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
-                  <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
-                </svg>
-              </button>
+          <div class="mt-6 flow-root">
+            <div class="-my-6 divide-y divide-gray-500/10">
+              <div class="space-y-2 py-6">
+                <a href="./marketplace.html" class="text-sm font-semibold leading-6 text-gray-900">Marketplace</a>
+                <a href="./trade.html" class="text-sm font-semibold leading-6 text-gray-900">Trade</a>
+                <a href="./donate.html" class="text-sm font-semibold leading-6 text-gray-900">Donate</a>
+                <a href="./about.html" class="text-sm font-semibold leading-6 text-gray-900">About</a>
+              </div>
+              <div class="py-6">
+                <a href="#"
+                  class="-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">Log
+                  in</a>
+              </div>
             </div>
-            <div class="mt-6 flow-root">
-              <div class="-my-6 divide-y divide-gray-500/10">
-                <div class="space-y-2 py-6">
-                  <a href="./marketplace" class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">Marketplace</a>
-                  <a href="./trade.html" class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">Trade</a>
-                  <a href="./donate.html" class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">Donate</a>
-                  <a href="./about.html" class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">About</a>
-                </div>
-                <div class="py-6">
-                  <!-- <a href="#" class="-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">Log in</a> -->
-                  <a href="./profile.html" class="mx-5">
-                    <img class="h-6 w-6" src="../assets/user.png" alt="">
-                  </a>
+          </div>
+        </div>
+      </div>
+    </header>
+    <div class="relative isolate px-6 pt-14 lg:px-8">
+      <div>
+      
+          <div class="mx-auto max-w-2xl px-4 pt-10 sm:px-6 lg:max-w-7xl lg:px-8">
+            <div class="text-left"> <!-- Changed from text-center to text-left -->
+                <h2 class="text-2xl font-bold tracking-tight text-gray-900 sm:text-3xl">My Donation List</h2> <!-- Changed class sizes for smaller text -->
+            </div>
+          </div>
+        <div class="mx-auto max-w-2xl px-4 py-6 sm:px-6 lg:max-w-7xl lg:px-8">
+
+          <div class="mt-6 grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-4 xl:gap-x-8">
+
+            <div class="group relative ">
+              <div
+                class="aspect-h-1 aspect-w-1 w-fit overflow-hidden rounded-md bg-gray-200 lg:aspect-none group-hover:opacity-75 lg:h-80">
+                <img src="../assets/anglsdemons.jpg" alt=""
+                  class="h-full w-full object-cover object-center lg:h-full lg:w-full" style="object-fit:contain;">
+              </div>
+            </div>
+            <div class="group relative">
+              <div
+                class="aspect-h-1 aspect-w-1 w-fit overflow-hidden rounded-md bg-gray-200 lg:aspect-none group-hover:opacity-75 lg:h-80">
+                <div onclick=""
+                  class="button_addBook absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
+                  <div class="text-gray-700 group relative flex justify-center items-center text black">
+                    Add a new book
+                    <button title="Add New" class="group cursor-pointer outline-none hover:rotate-90 duration-300">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="50px" height="50px" viewBox="0 0 24 24"
+                        class="stroke-slate-400 fill-none group-hover:fill-slate-800 group-active:stroke-slate-200 group-active:fill-slate-600 group-active:duration-0 duration-300">
+                        <path d="M12 22C17.5 22 22 17.5 22 12C22 6.5 17.5 2 12 2C6.5 2 2 6.5 2 12C2 17.5 6.5 22 12 22Z"
+                          stroke-width="1.5"></path>
+                        <path d="M8 12H16" stroke-width="1.5"></path>
+                        <path d="M12 16V8" stroke-width="1.5"></path>
+                      </svg>
+                    </button>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
-      </header>
 
-      <div class="relative isolate px-6 pt-14 lg:px-8">
-      <!--  Content here! -->
-        <div class="absolute inset-x-0 -top-40 -z-10 transform-gpu overflow-hidden blur-3xl sm:-top-80" aria-hidden="true">
-          <div class="relative left-[calc(50%-11rem)] aspect-[1155/678] w-[36.125rem] -translate-x-1/2 rotate-[30deg] bg-gradient-to-tr from-[#ff80b5] to-[#9089fc] opacity-30 sm:left-[calc(50%-30rem)] sm:w-[72.1875rem]" style="clip-path: polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)"></div>
+        <div class="mx-auto max-w-2xl px-4 pt-10 sm:px-6 lg:max-w-7xl lg:px-8">
+          <div class="text-left"> <!-- Changed from text-center to text-left -->
+              <h2 class="text-2xl font-bold tracking-tight text-gray-900 sm:text-3xl">Donations</h2> <!-- Changed class sizes for smaller text -->
+          </div>
         </div>
-        <div class="mx-auto max-w-2xl py-32 sm:py-48 lg:py-56">
-          <h1 class="text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl">Donate page</h1>
+
+
+        <div class="mx-auto max-w-2xl px-4 pt-10 sm:px-6 lg:max-w-7xl lg:px-8 mt-6 grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-4 xl:gap-x-8 mb-6">
+          <div class="group relative cursor-pointer" id="triggerBookModal">
+            <div class="aspect-w-1 aspect-h-1.5 w-full overflow-hidden rounded-md bg-gray-200 lg:aspect-none group-hover:opacity-75 lg:h-70 lg:w-60">
+              <img src="../assets/sapiens.jpeg" alt="Cover of the book Sapiens."
+                class="h-full w-full object-cover object-center lg:h-full lg:w-full">
+            </div>
+            <div class="mt-4 flex justify-between">
+              <div>
+                <h3 class="text-sm text-gray-700">
+                  <span aria-hidden="true" class="absolute inset-0"></span>
+                  Sapiens
+                </h3>
+                <p class="mt-1 text-sm text-gray-500">
+                  Non-fiction, History, Anthropology, Science
+                </p>
+                <!-- Interest Counter -->
+                <div class="text-base text-indigo-600 mt-1" id="interestCount">
+                  No one is interested
+                </div>
+              </div>
+              <p class="text-sm font-medium text-gray-900">24.99€</p>
+            </div>
+          </div>
+          
+
+          <div class="group relative">
+            <div
+              class="aspect-w-1 aspect-h-1.5 w-full overflow-hidden rounded-md bg-gray-200 lg:aspect-none group-hover:opacity-75 lg:h-70 lg:w-60">
+              <img src="../assets/homodeus.png" alt="Cover of the book 1984."
+                class="h-full w-full object-cover object-center lg:h-full lg:w-full">
+            </div>
+            <div class="mt-4 flex justify-between">
+              <div>
+                <h3 class="text-sm text-gray-700">
+                  <a href="#">
+                    <span aria-hidden="true" class="absolute inset-0"></span>
+                    Homo Deus 
+                  </a>
+                </h3>
+                <p class="mt-1 text-sm text-gray-500">
+                  Non-fiction, History, Anthropology, Science 
+                </p>
+                <!-- Interest Counter -->
+                <div class="text-base text-indigo-600 mt-1">
+                  3 people are interested
+                </div>
+              </div>
+              <p class="text-sm font-medium text-gray-900">24.49€</p>
+            </div>
+          </div>
+
+          <div class="group relative">
+            <div
+              class="aspect-w-1 aspect-h-1.5 w-full overflow-hidden rounded-md bg-gray-200 lg:aspect-none group-hover:opacity-75 lg:h-70 lg:w-60">
+              <img src="../assets/perfume.jpeg" alt="Front of men&#039;s Basic Tee in black."
+                class="h-full w-full object-cover object-center lg:h-full lg:w-full">
+            </div>
+            <div class="mt-4 flex justify-between">
+              <div>
+                <h3 class="text-sm text-gray-700">
+                  <a href="#">
+                    <span aria-hidden="true" class="absolute inset-0"></span>
+                    Perfume
+                  </a>
+                </h3>
+                <p class="mt-1 text-sm text-gray-500">Horror, Historical Fiction, Fantasy</p>
+                <!-- Interest Counter -->
+                <div class="text-base text-indigo-600 mt-1" >
+                  1 person is interested
+                </div>
+              </div>
+              <p class="text-sm font-medium text-gray-900">19.99€</p>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+      
+          
         </div>
       </div>
-
+    </div>
     </div>
 
-  </body>
+    <!-- Modal Dialog (initially hidden) -->
+    <div id="bookDescriptionModal" class="fixed inset-0 z-10 overflow-y-auto hidden">
+      <div class="flex items-end justify-center min-h-screen px-4 pt-4 pb-20 text-center sm:block sm:p-0">
+        <div class="fixed inset-0 transition-opacity bg-gray-500 bg-opacity-75" aria-hidden="true"></div>
+
+        <!-- This element is to trick the browser into centering the modal contents. -->
+        <span class="hidden sm:inline-block sm:align-middle sm:h-screen" aria-hidden="true">&#8203;</span>
+
+        <!-- Modal panel, show/hide based on modal state. -->
+        <div
+          class="inline-block overflow-hidden text-left align-bottom transition-all transform bg-white rounded-lg shadow-xl sm:my-8 sm:align-middle sm:max-w-lg sm:w-full">
+          <!-- Close Button at the top right corner -->
+          <div class="absolute top-0 right-0 pt-2 pr-2">
+            <button type="button" onclick="closeModal()"
+              class="bg-white rounded-md p-1 inline-flex items-center justify-center text-gray-400 hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500">
+              <span class="sr-only">Close</span>
+              <!-- Cross Icon using SVG for visuals -->
+              <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                stroke="currentColor" aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+              </svg>
+            </button>
+          </div>
+          <div class="px-4 pt-5 pb-4 bg-white sm:p-6 sm:pb-4">
+            <div class="sm:flex sm:items-start">
+              <div class="mt-3 text-center sm:mt-0 sm:ml-4 sm:text-left">
+                <h3 class="text-lg font-medium leading-6 text-gray-900" id="modal-title">
+                  Book Details
+                </h3>
+                <div class="mt-2">
+                  <p class="text-sm text-gray-500">
+                    Discover more about the book.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="border-t border-gray-100">
+            <dl class="divide-y divide-gray-100">
+              <div class="px-4 py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
+                <dt class="text-sm font-medium text-gray-900">
+                  Title
+                </dt>
+                <dd class="mt-1 text-sm text-gray-900 sm:col-span-2 sm:mt-0">
+                  Sapiens 
+                </dd>
+              </div>
+              <div class="px-4 py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
+                <dt class="text-sm font-medium text-gray-900">
+                  Author
+                </dt>
+                <dd class="mt-1 text-sm text-gray-900 sm:col-span-2 sm:mt-0">
+                  Yuval Noah Harari 
+                </dd>
+              </div>
+              <div class="px-4 py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
+                <dt class="text-sm font-medium text-gray-900">
+                  Genre
+                </dt>
+                <dd class="mt-1 text-sm text-gray-900 sm:col-span-2 sm:mt-0">
+                  Non-fiction, History, Anthropology, Science 
+                </dd>
+              </div>
+              <div class="px-4 py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
+                <dt class="text-sm font-medium text-gray-900">
+                  Synopsis
+                </dt>
+                <dd class="mt-1 text-sm text-gray-900 sm:col-span-2 sm:mt-0">
+                  "Sapiens: A Brief History of Humankind" is a book by Yuval Noah Harari that spans the history of human evolution from
+                  the emergence of archaic human species in the Stone Age up to the twenty-first century, focusing on Homo sapiens. The
+                  genre of "Sapiens" blends history with science and anthropology, providing insights into how humans have come to
+                  dominate the planet.
+                </dd>
+              </div>
+              <div class="px-4 py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
+                <img src="../assets/sapiens.jpeg" alt="Front of men&#039;s Basic Tee in black."
+                  class="h-full w-full object-cover object-center lg:h-full lg:w-full">
+              </div>
+            </dl>
+          </div>
+          <div class="px-4 py-3 bg-gray-50 sm:px-6 sm:flex sm:flex-row-reverse">
+            <button type="button" onclick="changeInterestCount()"
+              class="w-full px-4 py-2 text-base font-medium text-white bg-indigo-600 border border-transparent rounded-md shadow-sm hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 sm:ml-3 sm:w-auto sm:text-sm flex items-center justify-center">
+              I'm Interested 
+              <img class="h-6 w-6 ml-4" src="../assets/heart.png" alt="">
+            </button>
+          </div>
+          
+  </div>
+  <script src="../js/donate.js"></script>
+</body>
+
 </html>
