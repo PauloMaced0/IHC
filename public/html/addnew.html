@@ -100,9 +100,19 @@
         </div>
     
         <div class="mt-4 flex-1">
-          <label class="text-black" for="symbols">Gender</label>
-          <input placeholder="Romance,Drama..." class="w-full bg-white rounded-md border-gray-300 text-black px-2 py-1" id="symbols" type="text">
+          <label class="text-black" for="gender">Gender</label>
+          <select id="gender" class="w-full bg-white rounded-md border-gray-300 text-black px-2 py-1">
+            <option value="">Select a category</option>
+            <option value="romance">Romance</option>
+            <option value="drama">Drama</option>
+            <option value="fantasy">Fantasy</option>
+            <option value="sci-fi">Science Fiction</option>
+            <option value="mystery">Mystery</option>
+            <option value="thriller">Thriller</option>
+            <option value="nonfiction">Non-fiction</option>
+          </select>
         </div>
+         
       </div>
       <div class = "mt-4 flex flex-col items-center">
         <label class="custum-file-upload" for="file">
