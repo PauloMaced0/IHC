@@ -36,8 +36,13 @@
         </div>
         <div class="hidden lg:flex lg:flex-1 lg:justify-end">
           <!-- Shop Cart -->
-          <a href="./cart.html" class="mx-5">
-            <img class="h-6 w-6" src="../assets/shopping_cart.png" alt="">
+          <a href="./cart.html" class="mx-5 relative">
+            <img class="h-6 w-6" src="../assets/shopping_cart.png" alt="Shopping Cart">
+            <!-- Badge for item count -->
+            <span
+              class="absolute top-0 right-0 inline-flex items-center justify-center px-2 py-1 text-xs font-bold leading-none text-red-100 transform translate-x-1/2 -translate-y-1/2 bg-red-600 rounded-full" id="cartItemCount">
+              0
+            </span>
           </a>
           <!-- End Shop Cart -->
           <!-- <a href="#" class="text-sm font-semibold leading-6 text-gray-900">Log in <span aria-hidden="true">&rarr;</span></a> -->
@@ -293,6 +298,14 @@
                 </dt>
                 <dd class="mt-1 text-sm text-gray-900 sm:col-span-2 sm:mt-0">
                   A story of love and tragedy in the roaring twenties.
+                </dd>
+              </div>
+              <div class="px-4 py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
+                <dt class="text-sm font-medium text-gray-900">
+                  <b>Price</b>
+                </dt>
+                <dd class="mt-1 text-sm text-gray-900 sm:col-span-2 sm:mt-0">
+                  <b>29.99€</b> 
                 </dd>
               </div>
               <div class="px-4 py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">

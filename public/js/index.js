@@ -26,6 +26,8 @@ function closeModal() {
 
 function addToCart(product) {
     let cart = localStorage.getItem('shoppingCart');
+	let cartCount = document.getElementById('cartItemCount');
+
     cart = cart ? JSON.parse(cart) : [];
 
     let existingProduct = cart.find(item => item.id === product.id);
@@ -37,6 +39,7 @@ function addToCart(product) {
     }
     console.log("Add to cart:" + cart);
     localStorage.setItem('shoppingCart', JSON.stringify(cart));
+	cartCount.textContent = "1";
 
     closeModal();
 }
